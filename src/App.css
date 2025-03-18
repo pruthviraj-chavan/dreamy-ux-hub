@@ -35,3 +35,73 @@ html {
 .animate-glow {
   animation: glow 3s ease-in-out infinite;
 }
+
+/* Add 3D flip animation */
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Background gradient animation */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-gradient-animate {
+  background-size: 200% 200%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* Button hover effects */
+.btn-glow:hover {
+  box-shadow: 0 0 15px rgba(255, 97, 210, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Border gradient animation */
+.border-gradient-to-r {
+  border-image: linear-gradient(to right, #FF61D2, #6F2DFF, #0FF0FC) 1;
+}
+
+.border-gradient-to-b {
+  border-image: linear-gradient(to bottom, #FF61D2, #6F2DFF, #0FF0FC) 1;
+}
+
+/* Text gradient animation */
+.text-gradient-to-r {
+  background: linear-gradient(to right, #FF61D2, #6F2DFF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Enhanced float animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(10px) rotate(-2deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}

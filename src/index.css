@@ -141,4 +141,28 @@
   .glass {
     @apply bg-white/5 backdrop-blur-md border border-white/10;
   }
+  
+  /* 3D Transform Utilities */
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  
+  /* Gradient Text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-pink to-neon-blue bg-clip-text text-transparent;
+  }
+  
+  /* 3D Button */
+  .btn-3d {
+    @apply relative transition-all duration-200;
+    transform: translateZ(0);
+  }
+  
+  .btn-3d:hover {
+    transform: translateY(-3px);
+  }
+  
+  .btn-3d:active {
+    transform: translateY(1px);
+  }
 }
