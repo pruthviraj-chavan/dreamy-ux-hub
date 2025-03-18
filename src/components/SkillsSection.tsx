@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { 
   Search, FileText, Layers, Palette, Figma, 
   PenTool, LayoutGrid, Code, Smartphone, RefreshCw,
-  GalleryHorizontalEnd, Brush, Paintbrush, Sketch
+  GalleryHorizontalEnd, Brush, Paintbrush, PencilRuler
 } from 'lucide-react';
 
 interface SkillCardProps {
@@ -140,7 +140,7 @@ const SkillsSection = () => {
             <span>Adobe XD</span>
           </div>
           <div className="tool-icon p-4 glass rounded-lg flex flex-col items-center justify-center hover:scale-105 transition-all">
-            <Sketch size={40} className="text-neon-blue mb-2" />
+            <PencilRuler size={40} className="text-neon-blue mb-2" />
             <span>Sketch</span>
           </div>
           <div className="tool-icon p-4 glass rounded-lg flex flex-col items-center justify-center hover:scale-105 transition-all">
