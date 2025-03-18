@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,24 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom theme colors
+				pink: {
+					light: '#FF61D2',
+					DEFAULT: '#F85AA7',
+					dark: '#D23790',
+				},
+				purple: {
+					light: '#A45FD6',
+					DEFAULT: '#6F2DFF',
+					dark: '#4A1D9E',
+				},
+				neon: {
+					blue: '#0FF0FC',
+					pink: '#FE9090',
+					purple: '#CF8DFD',
+				},
+				dark: '#121212',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +102,55 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'glow': {
+					'0%, 100%': {
+						filter: 'brightness(1)'
+					},
+					'50%': {
+						filter: 'brightness(1.3)'
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
+				'spin-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
+				},
+				'pulse-border': {
+					'0%, 100%': { borderColor: 'rgba(255, 97, 210, 0.5)' },
+					'50%': { borderColor: 'rgba(255, 97, 210, 1)' }
+				},
+				'flip': {
+					'0%': { transform: 'rotateY(0deg)' },
+					'100%': { transform: 'rotateY(180deg)' }
+				},
+				'flip-back': {
+					'0%': { transform: 'rotateY(180deg)' },
+					'100%': { transform: 'rotateY(0deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'glow': 'glow 2s ease-in-out infinite',
+				'float': 'float 3s ease-in-out infinite',
+				'spin-slow': 'spin-slow 10s linear infinite',
+				'pulse-border': 'pulse-border 2s infinite',
+				'flip': 'flip 0.5s ease-out forwards',
+				'flip-back': 'flip-back 0.5s ease-out forwards'
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'hero-gradient': 'linear-gradient(to right bottom, #FF61D2, #FE9090)',
+				'dark-gradient': 'linear-gradient(to bottom, #121212, #1E1E1E)',
+				'neon-glow': 'linear-gradient(to right, #FF61D2, #0FF0FC)'
 			}
 		}
 	},
